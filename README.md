@@ -38,7 +38,7 @@ import 'package:timezone/timezone.dart';
 If you don't need any timezone specific features in your app, you may use `flutter_native_timezone` to get your devices' current timezone, then convert your previous `DateTime` with it.
 
 ```dart
-import 'package:flutter_native_timezone/flutter_native_timezone.dart';
+import 'package:flutter_timezone/flutter_timezone.dart';
 
 // As an example, our default timezone is UTC.
 Location _currentLocation = getLocation('Etc/UTC');
@@ -46,7 +46,7 @@ Location _currentLocation = getLocation('Etc/UTC');
 Future setCurentLocation() async {
   String timezone = 'Etc/UTC';
   try {
-    timezone = await FlutterNativeTimezone.getLocalTimezone();
+    timezone = await FlutterTimezone.getLocalTimezone();
   } catch (e) {
     print('Could not get the local timezone');
   }
